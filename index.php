@@ -26,19 +26,25 @@
             <div class="divider md"></div>
         </header>
 
-        <p class="bold">Do kupienia</p>
-        <div class="divider md"></div>
-        <p class="divider">marchew<button class="right">&#10004;</button></p>
-        <p class="divider">woda<button class="right">&#10004;</button></p>
-        <p class="divider">kukurydza<button class="right">&#10004;</button></p>
-        <p class="divider">fasola<button class="right">&#10004;</button></p>
+        <div id="to_buy">
+            <p class="bold">Do kupienia</p>
+            <div class="divider md"></div>
+            <p class="divider">marchew<button class="right">&#10004;</button></p>
+            <p class="divider">woda<button class="right">&#10004;</button></p>
+            <p class="divider">kukurydza<button class="right">&#10004;</button></p>
+            <p class="divider">fasola<button class="right">&#10004;</button></p>
+        </div>
 
-        <p class="bold done">Kupione</p>
-        <div class="divider md"></div>
-        <p class="divider">rabarbar<button class="right">&#8634;</button></p>
-        <p class="divider">chipsy<button class="right">&#8634;</button></p>
-        <p class="divider">kurczak<button class="right">&#8634;</button></p>
-        <p class="divider">śmietana 30%<button class="right">&#8634;</button></p>
+
+        <div id="bought">
+            <p class="bold done">Kupione</p>
+            <div class="divider md"></div>
+            <p class="divider">rabarbar<button class="right">&#8634;</button></p>
+            <p class="divider">chipsy<button class="right">&#8634;</button></p>
+            <p class="divider">kurczak<button class="right">&#8634;</button></p>
+            <p class="divider">śmietana 30%<button class="right">&#8634;</button></p>
+        </div>
+
     </div>
 
 </body>

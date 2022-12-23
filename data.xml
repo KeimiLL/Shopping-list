@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<root>
+    <toBuy>
+        <label>rzodkiewka</label>
+        <label>rabarbar</label>
+    </toBuy>
+    <bought>
+        <label>mięta</label>
+        <date>Sat, 17 Dec 2022 15:52:40 GMT</date>
+        <label>banan</label>
+        <date>Sat, 17 Dec 2022 15:54:41 GMT</date>
+        <label>pomarańcza</label>
+        <date>Sat, 17 Dec 2022 15:57:32 GMT</date>
+    </bought>
+    <hint>
+        <label>rzodkiewka</label>
+        <label>rabarbar</label>
+        <label>czosnek</label>
+        <label>pomidor</label>
+    </hint>
+</root>

@@ -35,7 +35,6 @@
             <p class="divider">fasola<button class="right">&#10004;</button></p>
         </div>
 
-
         <div id="bought">
             <p class="bold done">Kupione</p>
             <div class="divider md"></div>
@@ -44,7 +43,6 @@
             <p class="divider">kurczak<button class="right">&#8634;</button></p>
             <p class="divider">śmietana 30%<button class="right">&#8634;</button></p>
         </div>
-
     </div>
 
 </body>

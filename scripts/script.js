@@ -184,7 +184,7 @@ class ShoppingList {
         this.postNewToBuy(...this.toBuy.slice(-1));
     }
 
-    postNewToBuy() {
+    postNewToBuy(toBuy) {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "../php/addToBuy.php");
         xhr.onreadystatechange = function () {
@@ -292,7 +292,7 @@ class ShoppingList {
         this.showListBought();
     }
 
-    postMovedItem(mode, id, elem) {
+    postMovedItem(where, id, elem) {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "../php/moveItem.php");
 
@@ -310,8 +310,8 @@ class ShoppingList {
 
         const content =
             mode === "to_bought"
-                ? `<root><mode>${mode}</mode><id>${id}</id><label>${elem.label}</label><date>${elem.date}</date></root>`
-                : `<root><mode>${mode}</mode><id>${id}</id><label>${elem.label}</label></root>`;
+                ? `<root><where>${where}</where><id>${id}</id><label>${elem.label}</label><date>${elem.date}</date></root>`
+                : `<root><where>${where}</where><id>${id}</id><label>${elem.label}</label></root>`;
         const parser = new DOMParser();
         const docXML = parser.parseFromString(content, "text/xml");
         xhr.send(docXML);
@@ -326,4 +326,4 @@ const hintsList = document.querySelector('#hints');
 
 
 
-const shoppingList = new ShoppingList(toBuyList, boughtList, hintsList);
+const shoppingList = new ShoppingList();

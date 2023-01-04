@@ -26,6 +26,8 @@
             <div class="divider md"></div>
         </header>
 
+        <datalist id="hints"></datalist>
+
         <div id="to_buy">
             <p class="bold">Do kupienia</p>
             <div class="divider md"></div>

@@ -1,7 +1,7 @@
 <?php
 $list = $_GET['list'];
 
-$file = fopen('data.xml', 'r');
+$file = fopen('../data.xml', 'r');
 flock($file, LOCK_EX);
 
 //przygotowanie pliku z danymi w XML
@@ -9,7 +9,7 @@ $content = stream_get_contents($file);
 $allDataXML = simplexml_load_string($content);
 
 //dla konkretnej listy wysylam dane w xml
-if ($list == 'hint') {
+if ($list == 'hints') {
     echo $allDataXML->hint->asXML();
 } elseif ($list == 'toBuy') {
     echo $allDataXML->toBuy->asXML();

@@ -18,32 +18,23 @@
             <h1 class="bold">Lista zakupów</h1>
             <div class="divider"></div>
             <div class="new_item">
-                <p class="bold">Nowy:</p>
-                <input class="new_input" id="new_input" type="text" placeholder="Podaj produkt">
-                <button class="right add">Dodaj</button>
+                <label class="bold" for="new_input">Nowy:</label>
+                <input class="new_input" id="newInput" list="hints" type="text" placeholder="Podaj produkt">
+                <button class="right add" id="addbtn">Dodaj</button>
             </div>
 
             <div class="divider md"></div>
         </header>
 
         <datalist id="hints"></datalist>
-
+        <p class="bold">Do kupienia</p>
         <div id="to_buy">
-            <p class="bold">Do kupienia</p>
-            <div class="divider md"></div>
-            <p class="divider">marchew<button class="right">&#10004;</button></p>
-            <p class="divider">woda<button class="right">&#10004;</button></p>
-            <p class="divider">kukurydza<button class="right">&#10004;</button></p>
-            <p class="divider">fasola<button class="right">&#10004;</button></p>
         </div>
 
+        <div class="divider md"></div>
+
+        <p class="bold done">Kupione</p>
         <div id="bought">
-            <p class="bold done">Kupione</p>
-            <div class="divider md"></div>
-            <p class="divider">rabarbar<button class="right">&#8634;</button></p>
-            <p class="divider">chipsy<button class="right">&#8634;</button></p>
-            <p class="divider">kurczak<button class="right">&#8634;</button></p>
-            <p class="divider">śmietana 30%<button class="right">&#8634;</button></p>
         </div>
     </div>
 

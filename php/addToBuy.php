@@ -4,7 +4,7 @@ $data = file_get_contents('php://input');
 // dataXML to przekazany obiekt
 $dataXML = simplexml_load_string($data);
 //zabezpieczenie przed wielodostepem
-$file = fopen('data.xml', 'r+');
+$file = fopen('../data.xml', 'r+');
 flock($file, LOCK_EX);
 
 //przygotowanie pliku z danymi w XML

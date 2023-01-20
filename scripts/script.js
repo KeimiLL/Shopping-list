@@ -204,11 +204,12 @@ class ShoppingList {
     // wyslanie nowego elementu do kupienia zeby zapisac go do pliku
     sendNewItem(toBuy) {
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "../php/addToBuy.php");
+        xhr.open("POST", "./php/addToBuy.php");
         xhr.onreadystatechange = function () {
             if (this.readyState == 4) {
                 if (this.status == 200) {
                     const status = this.status;
+                    shoppingList.getListToBuy();
                 }
                 else console.log("Błąd: " + this.statusText)
             }
@@ -251,7 +252,7 @@ class ShoppingList {
             .join("");
 
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "../php/removeExpired.php");
+        xhr.open("POST", "./php/removeExpired.php");
         xhr.onreadystatechange = function () {
             if (this.readyState == 4) {
                 if (this.status == 200) {
@@ -324,6 +325,7 @@ class ShoppingList {
                 if (this.status == 200) {
                     if (this.responseText != null) {
                         const status = xhr.status;
+                        shoppingList.getListToBuy();
                     }
                     else console.log("Błąd: nie otrzymano danych")
                 }
@@ -346,8 +348,8 @@ class ShoppingList {
 
 const shoppingList = new ShoppingList();
 
-window.onload = function () {
+// window.onload = function () {
 
-    window.setInterval(function () { shoppingList.getListToBuy();
-    }, 1000);
-}
+//     window.setInterval(function () { shoppingList.getListToBuy();
+//     }, 1000);
+// }

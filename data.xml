@@ -1,15 +1,31 @@
 <?xml version="1.0"?>
 <root>
     <toBuy>
-        <label>kokos</label>
+
+
+        <label>lalka</label>
         <label>mandarynki</label>
-        <label>czosnek</label>
+        <label>szlugi</label>
+        <label>kokos</label>
+        <label>pilka</label>
+        <label>dragi</label>
     </toBuy>
     <bought>
+
+
         <label>rabarbar</label>
-        <date>Thu, 19 Jan 2023 19:08:27 GMT</date>
+        <date>Fri, 20 Jan 2023 13:52:10 GMT</date>
+        <label>denaturat</label>
+        <date>Fri, 20 Jan 2023 13:52:15 GMT</date>
+        <label>czosnek</label>
+        <date>Fri, 20 Jan 2023 13:52:41 GMT</date>
     </bought>
     <hint>
         <label>latawiec</label>
+        <label>lalka</label>
+        <label>denaturat</label>
+        <label>pilka</label>
+        <label>szlugi</label>
+        <label>dragi</label>
     </hint>
 </root>

@@ -9,6 +9,11 @@ class ShoppingList {
 
     // pobiera rzeczy do kupienia i umieszcza w tablicy toBuy
     getListToBuy() {
+        this.toBuy = [];
+        this.bought = [];
+        this.hints = [];
+        this.currElem = "";
+
         const xhr = new XMLHttpRequest();
 
         xhr.open("GET", "./php/getItems.php?list=toBuy");
@@ -312,7 +317,7 @@ class ShoppingList {
     // jesli cos zostalo przeniesione to aktualizuje plik z danymi
     updateData(where, id, elem) {
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "../php/updateData.php");
+        xhr.open("POST", "./php/updateData.php");
 
         xhr.onreadystatechange = function () {
             if (this.readyState == 4) {
@@ -340,3 +345,9 @@ class ShoppingList {
 }
 
 const shoppingList = new ShoppingList();
+
+window.onload = function () {
+
+    window.setInterval(function () { shoppingList.getListToBuy();
+    }, 1000);
+}

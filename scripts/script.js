@@ -5,6 +5,8 @@ class ShoppingList {
         this.hints = [];
         this.currElem = "";
         this.getListToBuy();
+        this.currTimestamp = "";
+        this.checkData();
     }
 
     // pobiera rzeczy do kupienia i umieszcza w tablicy toBuy
@@ -344,12 +346,31 @@ class ShoppingList {
         const docXML = parser.parseFromString(txt, "text/xml");
         xhr.send(docXML);
     }
+
+    checkData() {
+        setInterval(() => {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "./php/checkData.php");
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        if (this.responseText != null) {
+                            const currentTimestamp = this.response;
+                            if(currentTimestamp != shoppingList.currTimestamp) {
+                                shoppingList.currTimestamp = currentTimestamp;
+                                // refresh data if file has been modified
+                                shoppingList.getListToBuy();
+                            }
+                        }
+                        else console.log("Error: no data received")
+                    }
+                    else console.log("Error: " + this.statusText)
+                }
+            }
+            xhr.send();
+        }, 1000);
+    }
 }
 
 const shoppingList = new ShoppingList();
 
-// window.onload = function () {
-
-//     window.setInterval(function () { shoppingList.getListToBuy();
-//     }, 1000);
-// }

@@ -2,30 +2,19 @@
 <root>
     <toBuy>
 
-
-        <label>lalka</label>
-        <label>mandarynki</label>
-        <label>szlugi</label>
-        <label>kokos</label>
-        <label>pilka</label>
-        <label>dragi</label>
-    </toBuy>
+        
+        
+    <label>rolki</label><label>mandarynki</label></toBuy>
     <bought>
-
-
-        <label>rabarbar</label>
-        <date>Fri, 20 Jan 2023 13:52:10 GMT</date>
-        <label>denaturat</label>
-        <date>Fri, 20 Jan 2023 13:52:15 GMT</date>
-        <label>czosnek</label>
-        <date>Fri, 20 Jan 2023 13:52:41 GMT</date>
-    </bought>
+        
+        
+        
+        
+    <label>kot</label><date>Fri, 20 Jan 2023 14:47:31 GMT</date><label>pilka</label><date>Fri, 20 Jan 2023 14:47:32 GMT</date><label>lalka</label><date>Fri, 20 Jan 2023 14:47:33 GMT</date></bought>
     <hint>
-        <label>latawiec</label>
+        <label>mandarynki</label>
         <label>lalka</label>
-        <label>denaturat</label>
         <label>pilka</label>
-        <label>szlugi</label>
-        <label>dragi</label>
-    </hint>
+        <label>woda</label>
+    <label>rolki</label></hint>
 </root>

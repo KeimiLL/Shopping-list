@@ -350,7 +350,7 @@ class ShoppingList {
     checkData() {
         setInterval(() => {
             const xhr = new XMLHttpRequest();
-            xhr.open("GET", "./php/checkData.php");
+            xhr.open("GET", "./check/checkData.php");
             xhr.onreadystatechange = function () {
                 if (this.readyState == 4) {
                     if (this.status == 200) {
@@ -362,9 +362,9 @@ class ShoppingList {
                                 shoppingList.getListToBuy();
                             }
                         }
-                        else console.log("Error: no data received")
+                        else console.log("Błąd: nie otrzymano danych")
                     }
-                    else console.log("Error: " + this.statusText)
+                    else console.log("Błąd: " + this.statusText)
                 }
             }
             xhr.send();
